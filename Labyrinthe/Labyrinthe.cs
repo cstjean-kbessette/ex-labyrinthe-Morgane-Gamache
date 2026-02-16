@@ -26,6 +26,30 @@
             { '█','█','█','█','█','█','█','█','█','█','█','█','█','█','█','█','█','█','█','█' }
         };
 
+        public int posX { get; set; } = 1;
+        public int posY { get; set; } = 1;
+    
 
+        public void MoveUp()
+        {
+            
+        }
+
+        public void MoveDown()
+        {
+
+        }
+
+        public void MoveLeft()
+        {
+
+        }
+
+        public void MoveRight()
+        {
+
+        }
+
+        
     }
 }

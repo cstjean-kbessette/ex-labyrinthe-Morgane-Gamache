@@ -13,6 +13,17 @@
             Console.WriteLine("--------------------------------------------------------------------------------------\n");
         }
 
+        public void AfficherMap(Labyrinthe labyrinthe)
+        {
+            Console.Clear();
+            for (int i = 0; i < 20; i++)
+            {
+                for (int j = 0; j < 20; j++)
+                {
+                    Console.Write();
+                }
+            }
+        }
         public void AfficherVictoire()
         {
             Console.Clear();
