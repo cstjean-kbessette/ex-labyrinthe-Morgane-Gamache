@@ -13,15 +13,23 @@
             Console.WriteLine("--------------------------------------------------------------------------------------\n");
         }
 
-        public void AfficherMap(Labyrinthe labyrinthe)
+        public void AfficherLabyrinthe(Labyrinthe labyrinthe)
         {
             Console.Clear();
-            for (int i = 0; i < 20; i++)
+            for (int y = 0; y < labyrinthe.Map.GetLength(0); y++)
             {
-                for (int j = 0; j < 20; j++)
+                for (int x = 0; x < labyrinthe.Map.GetLength(1); x++)
                 {
-                    Console.Write();
+                    if (labyrinthe.posX == x && labyrinthe.posY == y)
+                    {
+                        Console.Write('P');
+                    }
+                    else
+                    {
+                        Console.Write(labyrinthe.Map[y, x]);
+                    }
                 }
+                Console.WriteLine();
             }
         }
         public void AfficherVictoire()

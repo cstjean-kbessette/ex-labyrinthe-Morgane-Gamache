@@ -13,10 +13,28 @@
 
         public void Run()
         {
-            while (true)
+            while (!labyrinthe.IsExit())
             {
-                view.AfficherMap(labyrinthe);
+                view.AfficherEntete();
+                view.AfficherLabyrinthe(labyrinthe);
+                ConsoleKey key = Console.ReadKey().Key;
+                switch (key)
+                {
+                    case ConsoleKey.UpArrow:
+                        labyrinthe.MoveUp();
+                        break;
+                    case ConsoleKey.DownArrow:
+                        labyrinthe.MoveDown();
+                        break;
+                    case ConsoleKey.LeftArrow:
+                        labyrinthe.MoveLeft();
+                        break;
+                    case ConsoleKey.RightArrow:
+                        labyrinthe.MoveRight();
+                        break;
+                }
             }
+            view.AfficherVictoire();
         }
     }
 }
